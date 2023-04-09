@@ -1,0 +1,13 @@
+<div class="container my-3 d-flex mx-auto p-2 border">
+    <div>
+        <h4 [ngClass]="{'strike': todo.active}">{{todo.title}}</h4>
+        <p [ngClass]="{'strike': todo.active}">{{todo.desc}} - {{todo.active}}</p>
+    </div>
+    <div class="mb-3 form-check">
+        <input type="checkbox" class="active" id="active" name="active" (click)="onCheckBoxClick(todo)">
+        <label class="form-check-label" for="active">Mark As Done</label>
+    </div>
+    <div class="ms-auto p-2">
+        <button class="btn btn-dangr bg-primary" (click)="onClick(todo)">Delete</button>
+    </div>
+</div>
